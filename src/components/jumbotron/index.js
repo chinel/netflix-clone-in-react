@@ -8,7 +8,7 @@ export default function Jumbotron({
 }) {
   return (
     <Inner direction={direction}>
-      <p>Hello Again</p>
+      {children}
     </Inner>
   );
 }
