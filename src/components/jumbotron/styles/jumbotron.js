@@ -53,7 +53,7 @@ export const SubTitle = styled.h2`
 `;
 
 export const Image = styled.img`
-  width: 100%;
+  max-width: 100%;
   height: auto;
 `;
 
