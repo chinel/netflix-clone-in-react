@@ -16,8 +16,8 @@ export default function Jumbotron({
   ...restProps
 }) {
   return (
-    <Item direction={direction}>
-      <Inner>{children}</Inner>
+    <Item {...restProps}>
+      <Inner direction={direction}>{children}</Inner>
     </Item>
   );
 }
@@ -38,10 +38,10 @@ Jumbotron.SubTitle = function JumbotronSubTitle({ children, ...restProps }) {
   return <SubTitle {...restProps}>{children}</SubTitle>;
 };
 
-Jumbotron.Image = function JumbotronImage({src, alt, ...restProps }) {
+Jumbotron.Image = function JumbotronImage({ src, alt, ...restProps }) {
   return (
     <ImageCon {...restProps}>
-      <Image src={src} alt={alt}/>
+      <Image src={src} alt={alt} />
     </ImageCon>
   );
 };
