@@ -1,4 +1,13 @@
 import React, { useState, useContext, createContext } from "react";
+import {
+  Container,
+  Inner,
+  Title,
+  Header,
+  Item,
+  Body,
+  Frame,
+} from "./styles/accordion";
 
 const ToggleContext = createContext();
 
@@ -30,7 +39,10 @@ Accordion.Item = function AccordionItem({ children, ...restProps }) {
 Accordion.Header = function AccordionHeader({ children, ...restProps }) {
   const { toggleShow, setToggleShow } = useContext(ToggleContext);
   return (
-    <Header onClick={() => setToggleShow()} {...restProps}>
+    <Header
+      onClick={() => setToggleShow((toggleShow) => !toggleShow)}
+      {...restProps}
+    >
       {children}
     </Header>
   );
