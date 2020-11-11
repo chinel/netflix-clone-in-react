@@ -2,7 +2,7 @@ import React from "react";
 import { Accordion } from "../components";
 import faqsData from "../fixtures/faqs";
 
-export function AccordionContainer() {
+export default function FaqContainer() {
   return (
     <Accordion>
       <Accordion.Title>Frequently Asked Questions</Accordion.Title>
