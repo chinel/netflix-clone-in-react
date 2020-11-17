@@ -1,9 +1,13 @@
 import styled from "styled-components/macro";
 import { Link as ReactRouterLink } from "react-router-dom";
 
-export const Background = styled.div``;
-
-export const Frame = styled.div``;
+export const Background = styled.div`
+  display: flex;
+  flex-direction: column;
+  background: url(${({ src }) =>
+      src ? `../images/misc/${src}.jpg` : "../images/misc/home-bg.jpg"})
+    top left / cover no-repeat;
+`;
 
 export const Container = styled.div`
   display: flex;
