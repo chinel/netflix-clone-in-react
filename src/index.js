@@ -4,12 +4,15 @@ import "normalize.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { GlobalStyles } from "./global-styles";
-import {firebase} from "./lib/firebase.prod";
+import { firebase } from "./lib/firebase.prod";
+import { FirebaseContext } from "./context/firebase";
 
 render(
   <>
-    <GlobalStyles />
-    <App />
+    <FirebaseContext.Provider value={{ firebase }}>
+      <GlobalStyles />
+      <App />
+    </FirebaseContext.Provider>
   </>,
   document.getElementById("root")
 );
