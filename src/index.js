@@ -4,6 +4,7 @@ import "normalize.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { GlobalStyles } from "./global-styles";
+import {firebase} from "./lib/firebase.prod";
 
 render(
   <>
