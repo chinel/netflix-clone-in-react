@@ -1,5 +1,6 @@
 import React from "react";
+import { HeaderContainer } from "../containers";
 
 export default function Signin() {
-  return <p>Hello From Signin</p>;
+  return <HeaderContainer>Hello From Signin</HeaderContainer>;
 }
