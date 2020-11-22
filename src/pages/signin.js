@@ -10,13 +10,20 @@ export default function Signin() {
   //check form elements are valid
   //Email and password
   const isInvalid = emailAddress === "" || password === "";
+
+  const handleSignIn = (event) => {
+    event.preventDefault();
+
+    //Firebase here
+  };
+
   return (
     <>
       <HeaderContainer>
         <Form>
           <Form.Title>Sign In</Form.Title>
           {error && <Form.Error>{error}</Form.Error>}
-          <Form.Base onSubmit={handleSignin} method="POST">
+          <Form.Base onSubmit={handleSignIn} method="POST">
             <Form.Input
               placeholder="Email Address"
               value={emailAddress}
