@@ -12,7 +12,27 @@ export default function Signin() {
   return (
     <>
       <HeaderContainer>
-        <Form></Form>
+        <Form>
+          <Form.Title>Sign In</Form.Title>
+          {error && <Form.Error>{error}</Form.Error>}
+          <Form.Base onSubmit={handleSignin} method="POST">
+            <Form.Input
+              placeholder="Email Address"
+              value={emailAddress}
+              onChange={({ target }) => setEmailAddress(target.value)}
+            />
+            <Form.Input
+              placeholder="Password"
+              type="password"
+              autoComplete="off"
+              value={password}
+              onChange={({ target }) => setEmailAddress(target.value)}
+            />
+            <Form.Submit disable={isInvalid} type="submit">
+              Sign In
+            </Form.Submit>
+          </Form.Base>
+        </Form>
       </HeaderContainer>
       <FooterContainer />
     </>

@@ -5,7 +5,7 @@ export const Container = styled.div``;
 
 export const Error = styled.div``;
 
-export const Base = styled.div``;
+export const Base = styled.form``;
 
 export const Title = styled.h1``;
 
