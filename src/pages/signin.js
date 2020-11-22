@@ -9,6 +9,7 @@ export default function Signin() {
 
   //check form elements are valid
   //Email and password
+  const isInvalid = emailAddress === "" || password === "";
   return (
     <>
       <HeaderContainer>
