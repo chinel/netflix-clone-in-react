@@ -1,10 +1,12 @@
 import React, { useState, useContext } from "react";
 import { FirebaseContext } from "../context/firebase";
+import { useHistory } from "react-router-dom";
 import { FooterContainer, HeaderContainer } from "../containers";
 import { Form } from "../components";
 import * as ROUTES from "../constants/routes";
 
 export default function Signin() {
+  const history = useHistory();
   const { firebase } = useContext(FirebaseContext);
   const [emailAddress, setEmailAddress] = useState("");
   const [password, setPassword] = useState("");
@@ -24,6 +26,7 @@ export default function Signin() {
       .signInWithEmailAndPassword(emailAddress, password)
       .then(() => {
         //push to the browse page
+        history.push(ROUTES.BROWSE);
       })
       .catch((error) => {
         setEmailAddress("");
@@ -49,7 +52,7 @@ export default function Signin() {
               type="password"
               autoComplete="off"
               value={password}
-              onChange={({ target }) => setEmailAddress(target.value)}
+              onChange={({ target }) => setPassword(target.value)}
             />
             <Form.Submit disable={isInvalid} type="submit">
               Sign In

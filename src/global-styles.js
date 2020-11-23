@@ -9,4 +9,8 @@ html, body{
     color: #333;
     font-size: 15px;
 }
+
+*{
+    outline: none!important;
+}
 `;
