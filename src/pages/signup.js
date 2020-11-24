@@ -19,6 +19,25 @@ export default function Signup() {
     event.preventDefault();
 
     //sign up with firebase
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(emailAddress, password)
+      .then((result) =>
+        result.user
+          .updateProfile({
+            displayName: firstName,
+            photoURL: Math.floor(Math.random() * 5) + 1,
+          })
+          .then(() => {
+            history.push(ROUTES.BROWSE);
+          })
+      )
+      .catch((error) => {
+        setFirstName("");
+        setEmailAddress("");
+        setPassword("");
+        setError(error.message);
+      });
   };
 
   return (
@@ -53,7 +72,7 @@ export default function Signup() {
             <Form.TextLink to={ROUTES.SIGN_IN}>Sign in now</Form.TextLink>
           </Form.Text>
           <Form.TextSmall>
-          This page is protected by Google reCaptcha to ensure that you're not
+            This page is protected by Google reCaptcha to ensure that you're not
             a bot. Learn more.
           </Form.TextSmall>
         </Form>
