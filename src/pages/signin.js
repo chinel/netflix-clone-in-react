@@ -15,9 +15,6 @@ export default function Signin() {
   //check form elements are valid
   //Email and password
   const isInvalid = emailAddress === "" || password === "";
-  console.log("email address", emailAddress);
-  console.log("password", password);
-  console.log("isInvalid", isInvalid);
 
   const handleSignIn = (event) => {
     event.preventDefault();
