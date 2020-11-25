@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import * as ROUTES from "./constants/routes";
 import { Home, Browse, Signup, Signin } from "./pages";
+import { IsUserRedirect } from "./helpers/routes";
 
 export default function App() {
   return (
