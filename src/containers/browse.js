@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import SelectProfileContainer from "./profile";
 import { FirebaseContext } from "../context/firebase";
-import { Loading } from "../components";
+import { Header, Loading } from "../components";
 
 export default function BrowseContainer({ slides }) {
   const [profile, setProfile] = useState({});
@@ -14,6 +14,17 @@ export default function BrowseContainer({ slides }) {
     setTimeout(() => {
       setLoading(false);
     }, 3000);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [profile.displayName]);
-  return <SelectProfileContainer user={user} setProfile={setProfile} />;
+
+  return profile.displayName ? (
+    <>
+      {loading ? <Loading src={user.photoURL} /> : <Loading.ReleaseBody />}
+      <Header src="joker1">
+        <p>Hello</p>
+      </Header>
+    </>
+  ) : (
+    <SelectProfileContainer user={user} setProfile={setProfile} />
+  );
 }
