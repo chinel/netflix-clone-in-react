@@ -75,6 +75,12 @@ export const Text = styled.p`
   margin: 0;
 `;
 
+export const Link = styled.p`
+  color: white;
+  text-decoration: none;
+  margin-right: 30px;
+`;
+
 export const FeatureCallOut = styled.h2`
   color: white;
   font-size: 50px;
