@@ -7,6 +7,11 @@ export const Background = styled.div`
   background: url(${({ src }) =>
       src ? `../images/misc/${src}.jpg` : "../images/misc/home-bg.jpg"})
     top left / cover no-repeat;
+
+  @media (max-width: 1100px) {
+    ${({ dontShowOnSmallViewPort }) =>
+      dontShowOnSmallViewPort && "background:none"}
+  }
 `;
 
 export const Container = styled.div`
@@ -79,6 +84,16 @@ export const Link = styled.p`
   color: white;
   text-decoration: none;
   margin-right: 30px;
+  font-weight: ${({ active }) => (active === true ? "700" : "normal")};
+  cursor: pointer;
+
+  &:hover {
+    font-weight: bold;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
 `;
 
 export const FeatureCallOut = styled.h2`
