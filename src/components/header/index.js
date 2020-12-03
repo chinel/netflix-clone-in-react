@@ -8,7 +8,8 @@ import {
   Feature,
   Text,
   FeatureCallOut,
-   Link,
+  Link,
+  Group,
 } from "./styles/header";
 
 export default function Header({ bg = true, children, ...restProps }) {
@@ -36,6 +37,10 @@ Header.TextLink = function HeaderTextLink({ children, ...restProps }) {
 
 Header.Frame = function HeaderFrame({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
+};
+
+Header.Group = function HeaderGroup({ children, ...restProps }) {
+  return <Group {...restProps}>{children}</Group>;
 };
 
 Header.ButtonLink = function HeaderButtonLink({ children, ...restProps }) {

@@ -105,3 +105,8 @@ export const FeatureCallOut = styled.h2`
   margin: 0;
   margin-bottom: 20px;
 `;
+
+export const Group = styled.div`
+  display: flex;
+  align-items: center;
+`;
