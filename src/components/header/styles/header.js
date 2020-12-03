@@ -126,13 +126,12 @@ export const Profile = styled.div`
   margin-left: 20px;
   position: relative;
 
+  &:hover > ${Dropdown} {
+    display: flex;
+    flex-direction: column;
+  }
   button {
     cursor: pointer;
-  }
-
-  &:hover > ${Dropdown} {
-    diplay: flex;
-    flex-direction: column;
   }
 `;
 
