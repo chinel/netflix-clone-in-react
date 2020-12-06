@@ -191,7 +191,7 @@ export const SearchInput = styled.input`
   margin-left: ${({ active }) => (active === true ? "10px" : "0")};
   padding: ${({ active }) => (active === true ? "0 10px" : "10px")};
   opacity: ${({ active }) => (active === true ? "1" : "0")};
-  width: ${({ active }) => (active === true ? "200px" : "0")};
+  width: ${({ active }) => (active === true ? "200px" : "0px")};
 `;
 
 export const Profile = styled.div`
