@@ -181,6 +181,25 @@ export const SearchIcon = styled.button`
   }
 `;
 
+export const PlayButton = styled.button`
+  box-shadow: 0 0.6vw 1vw -0.4vw rgba(0, 0, 0, 0.35);
+  background-color: #e6e6e6;
+  color: #000;
+  font-weight: bold;
+  border-width: 0;
+  padding: 10px 20px;
+  border-right: 5px;
+  max-width: 130px;
+  font-size: 20px;
+  margin-top: 30px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ff1e1e;
+    color: #fff;
+  }
+`;
+
 export const SearchInput = styled.input`
   background-color: #44444459;
   color: white;
@@ -191,7 +210,7 @@ export const SearchInput = styled.input`
   margin-left: ${({ active }) => (active === true ? "10px" : "0")};
   padding: ${({ active }) => (active === true ? "0 10px" : "10px")};
   opacity: ${({ active }) => (active === true ? "1" : "0")};
-  width: ${({ active }) => (active === true ? "200px" : "0")};
+  width: ${({ active }) => (active === true ? "200px" : "0px")};
 `;
 
 export const Profile = styled.div`
