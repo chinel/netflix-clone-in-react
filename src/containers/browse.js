@@ -90,6 +90,10 @@ export default function BrowseContainer({ slides }) {
                   <Card.Image
                     src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`}
                   />
+                  <Card.Meta>
+                    <Card.SubTitle>{item.title}</Card.SubTitle>
+                    <Card.Text>{item.description}</Card.Text>
+                  </Card.Meta>
                 </Card.Item>
               ))}
             </Card.Entities>
