@@ -30,9 +30,8 @@ export const Group = styled.div`
   display: flex;
   flex-direction: ${({ flexDirection }) =>
     flexDirection === "row" ? "row" : "column"};
-  ${({ alignItems }) => alignItems && `align-items: ${alignItems}`}
-  ${({ margin }) => margin && `margin: ${margin}`}
-
+  ${({ alignItems }) => alignItems && `align-items: ${alignItems}`};
+  ${({ margin }) => margin && `margin: ${margin}`};
 
   > ${Container}:first-of-type {
     @media (min-width: 1100px) {
@@ -51,64 +50,58 @@ export const SubTitle = styled.p`
 `;
 
 export const Text = styled.p`
-margin-top: 5px;
-font-size: 10px;
-color: #fff;
-margin-bottom: 0;
-user-select: none;
-display:none;
-line-height:normal;
-
-
+  margin-top: 5px;
+  font-size: 10px;
+  color: #fff;
+  margin-bottom: 0;
+  user-select: none;
+  display: none;
+  line-height: normal;
 `;
 
 export const FeatureText = styled.p`
-font-size: 18px;
-color: white;
-font-weight: ${({fontWeight}) => (fontWeight === 'bold' ? 'bold' : 'normal')};
-margin: 0;
+  font-size: 18px;
+  color: white;
+  font-weight: ${({ fontWeight }) =>
+    fontWeight === "bold" ? "bold" : "normal"};
+  margin: 0;
 
-@media(max-width: 600px){
-  line-height: 22px;
-}
- 
+  @media (max-width: 600px) {
+    line-height: 22px;
+  }
 `;
 
 export const Feature = styled.div`
- display: flex;
- flex-direction: row;
- background: url(${({src}) => src});
- background-size: contain;
- position: relative;
- height: 360px;
- background-position-x: right;
- background-repeat: no-repeat;
- background-color: black;
+  display: flex;
+  flex-direction: row;
+  background: url(${({ src }) => src});
+  background-size: contain;
+  position: relative;
+  height: 360px;
+  background-position-x: right;
+  background-repeat: no-repeat;
+  background-color: black;
 
-
-@media(max-width: 1000px){
+  @media (max-width: 1000px) {
     height: auto;
     background-size: auto;
 
-    ${Title}{
+    ${Title} {
       font-size: 20px;
       line-height: 20px;
       margin-bottom: 10px;
     }
 
-    ${FeatureText}{
-      font-size: 14px;     
+    ${FeatureText} {
+      font-size: 14px;
     }
-}
-
+  }
 `;
 
 /**This inherits from the title and then adds other properties */
 export const FeatureTitle = styled(Title)`
   margin-left: 0;
 `;
-
-
 
 export const FeatureClose = styled.button`
   color: white;
@@ -141,14 +134,12 @@ export const Maturity = styled.div`
 export const Content = styled.div`
   margin: 56px;
   max-width: 500px;
-  line-height:normal;
+  line-height: normal;
 
-  @media(max-width: 1000px){
+  @media (max-width: 1000px) {
     margin: 30px;
     max-width: none;
-
   }
-  
 `;
 
 export const Meta = styled.div`
