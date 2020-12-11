@@ -15,7 +15,7 @@ describe("<Player />", () => {
     fireEvent.click(getByText("Play"));
 
     expect(queryByTestId("player")).toBeTruthy();
-    fireEvent.click(queryByTestId("player"));
+    fireEvent.click(queryByTestId("player")); //this clicks the player component which is more of like click outside the component and it sets it to falsy
 
     expect(queryByTestId("player")).toBeFalsy();
     expect(container.firstChild).toMatchSnapshot();
