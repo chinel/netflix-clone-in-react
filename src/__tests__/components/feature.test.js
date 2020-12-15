@@ -10,5 +10,9 @@ describe("<Feature />", () => {
         <Feature.SubTitle>Watch anywhere. Cancel at any time.</Feature.SubTitle>
       </Feature>
     );
+
+    expect(getByText("Unlimited films, TV programmes and more.")).toBeTruthy();
+    expect(getByText("Watch anywhere. Cancel at any time.")).toBeTruthy();
+    expect(container.firstChild).toMatchSnapshot();
   });
 });
