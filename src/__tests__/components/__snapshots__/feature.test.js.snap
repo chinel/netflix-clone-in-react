@@ -12,6 +12,18 @@ exports[`<Feature /> renders the <Feature /> with just title 1`] = `
 </div>
 `;
 
+exports[`<Feature /> renders the <Feature /> with just title 2`] = `
+<div
+  class="feature__Container-sc-7iw5qb-0 iqMdKJ"
+>
+  <h1
+    class="feature__Title-sc-7iw5qb-1 kA-Dfcq"
+  >
+    Unlimited films, TV programmes and more.
+  </h1>
+</div>
+`;
+
 exports[`<Feature /> renders the <Feature /> with populated data 1`] = `
 <div
   class="feature__Container-sc-7iw5qb-0 iqMdKJ"
