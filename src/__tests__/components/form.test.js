@@ -55,5 +55,9 @@ describe("<Form />", () => {
         <Form.Submit type="submit">Sign In</Form.Submit>
       </Form>
     );
+
+    expect(getByText("Your email address is already being used")).toBeTruthy();
+    expect(queryByText("Sign In").disabled).toBeFalsy();
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

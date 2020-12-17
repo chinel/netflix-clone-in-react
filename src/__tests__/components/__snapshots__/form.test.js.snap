@@ -50,3 +50,21 @@ exports[`<Form /> renders the <Form /> with populated data 1`] = `
   </p>
 </div>
 `;
+
+exports[`<Form /> renders the <Form/> with an error 1`] = `
+<div
+  class="form__Container-sc-1ohh9u9-0 iZnuyL"
+>
+  <div
+    class="form__Error-sc-1ohh9u9-1 OyvqY"
+  >
+    Your email address is already being used
+  </div>
+  <button
+    class="form__Submit-sc-1ohh9u9-8 kvFzBG"
+    type="submit"
+  >
+    Sign In
+  </button>
+</div>
+`;
