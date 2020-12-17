@@ -35,7 +35,7 @@ Form.TextSmall = function FormTextSmall({ children, ...restProps }) {
   return <TextSmall {...restProps}>{children}</TextSmall>;
 };
 
-Form.TextLink = function FormLink({ children, ...restProps }) {
+Form.Link = function FormLink({ children, ...restProps }) {
   return <Link {...restProps}>{children}</Link>;
 };
 
