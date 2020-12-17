@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Loading /> renders the <Loading /> component 1`] = `
+<div
+  class="loading__Spinner-sc-1q1z54u-0 eTeIrC"
+  data-testid="loading"
+>
+  <img
+    class="loading__Picture-sc-1q1z54u-1 iMWTOT"
+    data-testid="loading-picture"
+    src="/images/users//images/karl.png.png"
+  />
+</div>
+`;
