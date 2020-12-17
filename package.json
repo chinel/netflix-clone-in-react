@@ -40,7 +40,7 @@
   "jest": {
     "collectCoverageFrom": [
       "<rootDir>/src/**/*.js",
-      "!<rootDir>/src/app.js",
+      "!<rootDir>/src/App.js",
       "!<rootDir>/src/helpers/routes.js",
       "!<rootDir>/src/lib/firebase.js",
       "!<rootDir>/src/lib/firebase.prod.js",

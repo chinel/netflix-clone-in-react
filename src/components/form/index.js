@@ -6,9 +6,9 @@ import {
   Title,
   Text,
   TextSmall,
-  Link,
   Input,
   Submit,
+  TextLink,
 } from "./styles/form";
 
 export default function Form({ children, ...restProps }) {
@@ -36,7 +36,7 @@ Form.TextSmall = function FormTextSmall({ children, ...restProps }) {
 };
 
 Form.Link = function FormLink({ children, ...restProps }) {
-  return <Link {...restProps}>{children}</Link>;
+  return <TextLink {...restProps}> {children} </TextLink>;
 };
 
 Form.Input = function FormInput({ children, ...restProps }) {

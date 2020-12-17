@@ -51,7 +51,7 @@ export const TextSmall = styled.p`
   color: #8c8c8c;
 `;
 
-export const Link = styled(ReactRouterLink)`
+export const TextLink = styled(ReactRouterLink)`
   color: white;
   text-decoration: none;
 
