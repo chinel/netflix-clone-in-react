@@ -69,7 +69,7 @@ export default function Signup() {
           </Form.Base>
           <Form.Text>
             Already a user?{" "}
-            <Form.TextLink to={ROUTES.SIGN_IN}>Sign in now</Form.TextLink>
+            <Form.Link to={ROUTES.SIGN_IN}>Sign in now</Form.Link>
           </Form.Text>
           <Form.TextSmall>
             This page is protected by Google reCaptcha to ensure that you're not
