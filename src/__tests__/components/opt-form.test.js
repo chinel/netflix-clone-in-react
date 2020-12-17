@@ -15,5 +15,14 @@ describe("<OptForm />", () => {
         </OptForm.Text>
       </OptForm>
     );
+
+    expect(getByText("Try it now")).toBeTruthy();
+    expect(
+      getByText(
+        "Ready to watch? Enter your email address to create or restart your membership."
+      )
+    ).toBeTruthy();
+    expect(getByPlaceholderText("Email Address")).toBeTruthy();
+    expect(container.firstChild).toMatchSnapshot();
   });
 });
