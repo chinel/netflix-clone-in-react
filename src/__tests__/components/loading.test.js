@@ -12,4 +12,10 @@ describe("<Loading />", () => {
     expect(getByTestId("loading-picture")).toBeTruthy();
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  it("renders the <Loading.ReleaseBody/>", () => {
+    const { container, getByTestId } = render(
+      <Loading.ReleaseBody data-testid="loading" />
+    );
+  });
 });
