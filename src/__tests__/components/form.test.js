@@ -3,6 +3,8 @@ import { render } from "@testing-library/react";
 import { Form } from "../../components";
 import * as ROUTES from "../../constants/routes";
 
+jest.mock("react-router-dom");
+
 describe("<Form />", () => {
   it("renders the <Form /> with populated data", () => {
     const { container, getByText, getByPlaceholderText } = render(
