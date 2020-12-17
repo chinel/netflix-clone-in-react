@@ -47,4 +47,13 @@ describe("<Form />", () => {
     expect(getByPlaceholderText("Password")).toBeTruthy();
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  it("renders the <Form/> with an error", () => {
+    const { container, getByText, queryByText } = render(
+      <Form>
+        <Form.Error>Your email address is already being used</Form.Error>
+        <Form.Submit type="submit">Sign In</Form.Submit>
+      </Form>
+    );
+  });
 });
