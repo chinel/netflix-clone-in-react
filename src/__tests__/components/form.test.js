@@ -26,7 +26,7 @@ describe("<Form />", () => {
 
         <Form.Text>
           New to Netflix?{" "}
-          <Form.Link to="/signup">Sign up now.</Form.Link>
+          <Form.Link to={ROUTES.SIGN_UP}>Sign up now.</Form.Link>
         </Form.Text>
         <Form.TextSmall>
           This page is protected by Google reCaptcha to ensure that you're not a
