@@ -2,30 +2,25 @@
 
 exports[`<Header/> renders the <Header /> with populated data 1`] = `
 <div
-  class="header__Background-sc-1m31ll7-0 ecqacN"
-  data-testid="header-bg"
+  class="header__Container-sc-1m31ll7-1 dNkzVR"
 >
-  <div
-    class="header__Container-sc-1m31ll7-1 dNkzVR"
+  <link>
+    <img
+      alt="Netflix"
+      class="header__Logo-sc-1m31ll7-2 eAeDDk"
+      src="/logo.svg"
+    />
+  </link>
+  <link
+    class="header__ButtonLink-sc-1m31ll7-3 epyApl"
   >
-    <link>
-      <img
-        alt="Netflix"
-        class="header__Logo-sc-1m31ll7-2 eAeDDk"
-        src="/logo.svg"
-      />
-    </link>
-    <link
-      class="header__ButtonLink-sc-1m31ll7-3 epyApl"
-    >
-      Sign In
-    </link>
-    <p
-      class="header__Link-sc-1m31ll7-6 gNlzBV"
-    >
-      Hello I am a link!
-    </p>
-  </div>
+    Sign In
+  </link>
+  <p
+    class="header__Link-sc-1m31ll7-6 gNlzBV"
+  >
+    Hello I am a link!
+  </p>
 </div>
 `;
 

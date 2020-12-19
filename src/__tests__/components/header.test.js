@@ -8,8 +8,8 @@ jest.mock("react-router-dom", () => ({
 
 describe("<Header/>", () => {
   it("renders the <Header /> with populated data", () => {
-    const { container, getByText, getByTestId } = render(
-      <Header>
+    const { container, getByText, queryByTestId } = render(
+      <Header bg={false}>
         <Header.Frame>
           <Header.Logo src="/logo.svg" alt="Netflix" />
           <Header.ButtonLink>Sign In</Header.ButtonLink>
@@ -19,7 +19,7 @@ describe("<Header/>", () => {
     );
 
     expect(getByText("Hello I am a link!")).toBeTruthy();
-    expect(getByTestId("header-bg")).toBeTruthy();
+    expect(queryByTestId("header-bg")).toBeFalsy();
     expect(container.firstChild).toMatchSnapshot();
   });
 
