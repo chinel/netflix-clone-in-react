@@ -8,16 +8,12 @@ describe("<Profiles />", () => {
       <Profiles>
         <Profiles.Title>Who's watching?</Profiles.Title>
         <Profiles.List>
-          <Profiles.User
-            onClick={() =>
-              setProfile({
-                displayName: user.displayName,
-                photoURL: user.photoURL,
-              })
-            }
-          >
-            <Profiles.Picture src={user.photoURL} />
-            <Profiles.Name>{user.displayName}</Profiles.Name>
+          <Profiles.User onClick={() => {}}>
+            <Profiles.Picture
+              src="/images/nelly.png"
+              data-testid="profile-picture"
+            />
+            <Profiles.Name>Nelly Kally</Profiles.Name>
           </Profiles.User>
         </Profiles.List>
       </Profiles>
