@@ -20,7 +20,13 @@ import {
 } from "./styles/header";
 
 export default function Header({ bg = true, children, ...restProps }) {
-  return bg ? <Background {...restProps}>{children}</Background> : children;
+  return bg ? (
+    <Background {...restProps} data-testid="header-bg">
+      {children}
+    </Background>
+  ) : (
+    children
+  );
 }
 
 Header.FeatureCallOut = function HeaderFeatureCallOut({
@@ -98,6 +104,6 @@ Header.Profile = function HeaderProfile({ children, ...restProps }) {
   return <Profile {...restProps}>{children}</Profile>;
 };
 
-Header.PlayButton = function HeaderPlayButton({children, ...restProps}){
+Header.PlayButton = function HeaderPlayButton({ children, ...restProps }) {
   return <PlayButton {...restProps}>{children}</PlayButton>;
-}
+};
