@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header/> renders the <Header /> with populated data 1`] = `
+<div
+  class="header__Container-sc-1m31ll7-1 dNkzVR"
+>
+  <link>
+    <img
+      alt="Netflix"
+      class="header__Logo-sc-1m31ll7-2 eAeDDk"
+      src="/logo.svg"
+    />
+  </link>
+  <link
+    class="header__ButtonLink-sc-1m31ll7-3 epyApl"
+  >
+    Sign In
+  </link>
+  <p
+    class="header__Link-sc-1m31ll7-6 gNlzBV"
+  >
+    Hello I am a link!
+  </p>
+</div>
+`;
+
+exports[`<Header/> renders the full <Header/> with a background 1`] = `
+<div
+  class="header__Background-sc-1m31ll7-0 iycOmU"
+  data-testid="header-bg"
+  src="joker1"
+>
+  <div
+    class="header__Container-sc-1m31ll7-1 dNkzVR"
+  >
+    <div
+      class="header__Group-sc-1m31ll7-8 dzTKaV"
+    >
+      <link>
+        <img
+          alt="Netflix"
+          class="header__Logo-sc-1m31ll7-2 eAeDDk"
+          src="/images/logo.svg"
+        />
+      </link>
+      <p
+        class="header__Link-sc-1m31ll7-6 fSDUHl"
+      >
+        Series
+      </p>
+      <p
+        class="header__Link-sc-1m31ll7-6 fSDUHl"
+      >
+        Films
+      </p>
+    </div>
+    <div
+      class="header__Group-sc-1m31ll7-8 dzTKaV"
+    >
+      <div
+        class="header__Search-sc-1m31ll7-11 jAoowP"
+      >
+        <button
+          class="header__SearchIcon-sc-1m31ll7-12 ORMEu"
+          data-testid="search-click"
+        >
+          <img
+            alt="Search"
+            src="/images/icons/search.png"
+          />
+        </button>
+        <input
+          class="header__SearchInput-sc-1m31ll7-14 cIolPt"
+          data-testid="search-input"
+          placeholder="Search films and series"
+          value="joker"
+        />
+      </div>
+      <div
+        class="header__Profile-sc-1m31ll7-15 bLbMEA"
+      >
+        <button
+          class="header__Picture-sc-1m31ll7-9 dWhiwV"
+          src="/images/users//images/nelly.png.png"
+        />
+        <div
+          class="header__Dropdown-sc-1m31ll7-10 glgFsw"
+        >
+          <div
+            class="header__Group-sc-1m31ll7-8 dzTKaV"
+          >
+            <button
+              class="header__Picture-sc-1m31ll7-9 dWhiwV"
+              src="/images/users//images/nelly.png.png"
+            />
+            <p
+              class="header__Link-sc-1m31ll7-6 fSDUHl"
+            >
+              Nelly Kally
+            </p>
+          </div>
+          <div
+            class="header__Group-sc-1m31ll7-8 dzTKaV"
+          >
+            <p
+              class="header__Link-sc-1m31ll7-6 fSDUHl"
+            >
+              Sign Out
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="header__Container-sc-1m31ll7-1 header__Feature-sc-1m31ll7-4 dNkzVR clSXOn"
+  >
+    <h2
+      class="header__FeatureCallOut-sc-1m31ll7-7 fUjtUW"
+    >
+      Watch Joker Now
+    </h2>
+    <p
+      class="header__Text-sc-1m31ll7-5 eLexux"
+    >
+      Forever alone in a crowd..
+    </p>
+    <button
+      class="header__PlayButton-sc-1m31ll7-13 dnppFD"
+    >
+      Play
+    </button>
+  </div>
+</div>
+`;
