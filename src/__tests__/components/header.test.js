@@ -2,7 +2,9 @@ import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import { Header } from "../../components";
 
-jest.mock("react-router-dom");
+jest.mock("react-router-dom", () => ({
+  Link: "Link",
+}));
 
 describe("<Header/>", () => {
   it("renders the <Header /> with populated data", () => {
@@ -22,40 +24,29 @@ describe("<Header/>", () => {
   });
 
   it("renders the full <Header/> with a background", () => {
-    const { container, getByText } = render(
+    const { container, getByText, getByTestId } = render(
       <Header src="joker1" dontShowOnSmallViewPort>
         <Header.Frame>
           <Header.Group>
-            <Header.Logo to={ROUTES.HOME} alt="Netflix" src={logo} />
-            <Header.TextLink
-              active={category === "series" ? "true" : "false"}
-              onClick={() => setCategory("series")}
-            >
+            <Header.Logo alt="Netflix" src="/images/logo.svg" />
+            <Header.TextLink active={false} onClick={() => {}}>
               Series
             </Header.TextLink>
-            <Header.TextLink
-              active={category === "films" ? "true" : "false"}
-              onClick={() => setCategory("films")}
-            >
+            <Header.TextLink active onClick={() => {}}>
               Films
             </Header.TextLink>
           </Header.Group>
           <Header.Group>
-            <Header.Search
-              searchTerm={searchTerm}
-              setSearchTerm={setSearchTerm}
-            />
+            <Header.Search searchTerm="joker" setSearchTerm={() => {}} />
             <Header.Profile>
-              <Header.Picture src={user.photoURL} />
+              <Header.Picture src="/images/nelly.png" />
               <Header.Dropdown>
                 <Header.Group>
-                  <Header.Picture src={user.photoURL} />
-                  <Header.TextLink>{user.displayName}</Header.TextLink>
+                  <Header.Picture src="/images/nelly.png" />
+                  <Header.TextLink>Nelly Kally</Header.TextLink>
                 </Header.Group>
                 <Header.Group>
-                  <Header.TextLink onClick={() => firebase.auth().signOut()}>
-                    Sign Out
-                  </Header.TextLink>
+                  <Header.TextLink onClick={() => {}}>Sign Out</Header.TextLink>
                 </Header.Group>
               </Header.Dropdown>
             </Header.Profile>
@@ -63,16 +54,24 @@ describe("<Header/>", () => {
         </Header.Frame>
         <Header.Feature>
           <Header.FeatureCallOut>Watch Joker Now</Header.FeatureCallOut>
-          <Header.Text>
-            Forever alone in a crowd, failed comedian Arthur Fleck seeks
-            connection as he walks the streets of Gotham City. Arthur wears two
-            masks — the one he paints for his day job as a clown, and the guise
-            he projects in a futile attempt to feel like he’s part of the world
-            around him.
-          </Header.Text>
+          <Header.Text>Forever alone in a crowd..</Header.Text>
           <Header.PlayButton>Play</Header.PlayButton>
         </Header.Feature>
       </Header>
     );
+    expect(getByTestId("search-input")).toBeTruthy();
+    expect(getByTestId("search-input").value).toBe("joker");
+    fireEvent.change(getByTestId("search-input"), {
+      target: { value: "Simpsons" },
+    });
+    fireEvent.click(getByTestId("search-click"));
+    expect(getByText("Series")).toBeTruthy();
+    expect(getByText("Films")).toBeTruthy();
+    expect(getByText("Nelly Kally")).toBeTruthy();
+    expect(getByText("Watch Joker Now")).toBeTruthy();
+    expect(getByText("Forever alone in a crowd..")).toBeTruthy();
+    expect(getByText("Sign Out")).toBeTruthy();
+    expect(getByText("Play")).toBeTruthy();
+    expect(container.firstChild).toMatchSnapshot();
   });
 });
