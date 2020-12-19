@@ -24,4 +24,18 @@ describe("<Profiles />", () => {
     expect(getByText("Nelly Kally")).toBeTruthy();
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  it("renders the <Profiles/> with populated data but misc profile image", () => {
+    const { container, getByText, getByTestId } = render(
+      <Profiles>
+        <Profiles.Title>Who's watching?</Profiles.Title>
+        <Profiles.List>
+          <Profiles.User onClick={() => {}}>
+            <Profiles.Picture data-testid="profile-picture-misc" />
+            <Profiles.Name>Nelly Kally</Profiles.Name>
+          </Profiles.User>
+        </Profiles.List>
+      </Profiles>
+    );
+  });
 });
