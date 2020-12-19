@@ -20,4 +20,8 @@ describe("<Header/>", () => {
     expect(getByTestId("header-bg")).toBeTruthy();
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  it("renders the full <Header/> with a background", () => {
+    const { container, getByText } = render();
+  });
 });
