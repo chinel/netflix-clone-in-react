@@ -37,5 +37,9 @@ describe("<Profiles />", () => {
         </Profiles.List>
       </Profiles>
     );
+    expect(getByText("Who's watching?")).toBeTruthy();
+    expect(getByTestId("profile-picture-misc")).toBeTruthy();
+    expect(getByText("Nelly Kally")).toBeTruthy();
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

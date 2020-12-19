@@ -29,3 +29,33 @@ exports[`<Profiles /> renders the <Profiles /> with populated data 1`] = `
   </ul>
 </div>
 `;
+
+exports[`<Profiles /> renders the <Profiles/> with populated data but misc profile image 1`] = `
+<div
+  class="profiles__Container-wp29q2-0 TeRKi"
+>
+  <h1
+    class="profiles__Title-wp29q2-1 bBbvEg"
+  >
+    Who's watching?
+  </h1>
+  <ul
+    class="profiles__List-wp29q2-2 dxUmQl"
+  >
+    <li
+      class="profiles__Item-wp29q2-5 iCqkNr"
+    >
+      <img
+        class="profiles__Picture-wp29q2-4 ggHnSq"
+        data-testid="profile-picture-misc"
+        src="/images/misc/loading.gif"
+      />
+      <p
+        class="profiles__Name-wp29q2-3 lcuhlh"
+      >
+        Nelly Kally
+      </p>
+    </li>
+  </ul>
+</div>
+`;
