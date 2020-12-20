@@ -1,0 +1,17 @@
+import React from "react";
+import { render, fireEvent } from "@testing-library/react";
+import { SelectProfileContainer } from "../../containers";
+
+jest.mock("react-router-dom", () => ({
+  Link: "Link",
+}));
+
+describe("<Profiles />", () => {
+  it("renders the <Profiles />", () => {
+    const user = { displayName: "Nelly", photoURL: "profile.png" };
+    const setProfile = jest.fn(); //mocking a function
+    const {getByTestId} = render(
+        <SelectProfileContainer user={user} setProfile={setProfile}/>
+    )
+  });
+});
