@@ -8,6 +8,12 @@ jest.mock("react-router-dom", () => ({
 
 describe("Homepage", () => {
   it("description", () => {
-    const { getByText, getByTestId } = render(<Home />);
+    const { getByText, getByPlaceholderText, getByTestId } = render(<Home />);
+    expect(getByText("Unlimited films, TV programmes and more.")).toBeTruthy();
+    expect(getByTestId("email")).toBeTruthy();
+    expect(getByText("Watch anywhere. Cancel at any time.")).toBeTruthy();
+    expect(getByTestId("try-it-now")).toBeTruthy();
+
+    expect(getByTestId("ready")).toBeTruthy();
   });
 });
