@@ -10,8 +10,11 @@ describe("<Profiles />", () => {
   it("renders the <Profiles />", () => {
     const user = { displayName: "Nelly", photoURL: "profile.png" };
     const setProfile = jest.fn(); //mocking a function
-    const {getByTestId} = render(
-        <SelectProfileContainer user={user} setProfile={setProfile}/>
-    )
+    const { getByTestId } = render(
+      <SelectProfileContainer user={user} setProfile={setProfile} />
+    );
+
+    fireEvent.click(getByTestId("user-profile"));
+    expect(setProfile).toHaveBeenCalled();
   });
 });
