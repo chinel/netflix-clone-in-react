@@ -36,3 +36,11 @@ test("selectionFilter with legitmate data", () => {
   expect(slides.series[0].data[0].maturity).toBe("18");
   expect(slides.series[0].data[0].slug).toBe("tiger-king");
 });
+
+test("selectionFilter with no data", () => {
+  const slides = selectionFilter();
+  expect(slides.series[0].title).toBe("Documentaries");
+  expect(slides.series[0].data).toBe(undefined);
+  expect(slides.films[0].title).toBe("Drama");
+  expect(slides.films[0].data).toBe(undefined);
+});
