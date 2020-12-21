@@ -48,7 +48,13 @@ describe("<Signin/>", () => {
       await fireEvent.change(getByPlaceholderText("Password"), {
         target: { value: "password" },
       });
+
       fireEvent.click(queryByTestId("sign-in"));
+      expect(getByPlaceholderText("Email Address").value).toBe(
+        "nelly@gmail.com"
+      );
+      expect(getByPlaceholderText("Password").value).toBe("password");
+      expect(queryByTestId("error")).toBeFalsy();
     });
   });
 });
