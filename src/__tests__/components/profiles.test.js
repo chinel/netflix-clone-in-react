@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import { Profiles } from "../../components";
+import { MemoryRouter } from "react-router-dom";
 
 describe("<Profiles />", () => {
   it("renders the <Profiles /> with populated data", () => {

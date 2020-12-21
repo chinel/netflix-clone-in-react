@@ -8,6 +8,7 @@ export default function Browse() {
   const { series } = useContent("series");
   const { films } = useContent("films");
   //slides for the browse page
+ 
   const slides = selectionFilter({ series, films });
   return <BrowseContainer slides={slides} />;
 }
