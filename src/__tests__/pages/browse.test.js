@@ -46,7 +46,6 @@ jest.mock("../../utils/selection-filter", () => ({
   }),
 }));
 
-console.log(selectionFilter());
 const firebase = {};
 Object.defineProperty(firebase, "auth", {
   value: () => ({

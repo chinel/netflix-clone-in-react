@@ -34,7 +34,6 @@ Object.defineProperty(firebase, "auth", {
   }),
 });
 
-
 describe("<Signup/>", () => {
   it("renders the sign up page with a form submission", async () => {
     const { getByTestId, getByPlaceholderText, queryByTestId } = render(
