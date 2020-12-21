@@ -19,6 +19,7 @@ export default function Signin() {
   const handleSignIn = (event) => {
     event.preventDefault();
 
+    //console.log(firebase.auth());
     //Firebase here
 
     firebase
@@ -54,7 +55,11 @@ export default function Signin() {
               value={password}
               onChange={({ target }) => setPassword(target.value)}
             />
-            <Form.Submit disabled={isInvalid} type="submit">
+            <Form.Submit
+              data-testid="sign-in"
+              disabled={isInvalid}
+              type="submit"
+            >
               Sign In
             </Form.Submit>
           </Form.Base>
