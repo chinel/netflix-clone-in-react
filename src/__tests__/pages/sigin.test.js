@@ -30,8 +30,6 @@ Object.defineProperty(firebase, "auth", {
   }),
 });
 
-console.log(firebase.auth().signInWithEmailAndPassword());
-
 describe("<Signin/>", () => {
   it("renders the sign in page with a form submission", async () => {
     const { getByTestId, getByPlaceholderText, queryByTestId } = render(
